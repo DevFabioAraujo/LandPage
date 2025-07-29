@@ -1,0 +1,67 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "hero hero hero hero"
+                         "about about about about "
+                         "services services services services"
+                         "projects projects projects projects"
+                         "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); */
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* HEADER*/
+.header{
+    background-color: #ffffff;
+   grid-area: header;
+}
+.header .header-container{
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+
+}
+
+.header h1{
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.header a:hover h1{
+    color: coral;
+}
+
+/* HERO */
+.hero{
+    background-color: rgb(244, 4, 4);
+    grid-area: hero;
+}
+/* ABOUT */
+.about{
+    background-color: lightgreen;
+    grid-area: about;
+}   
+/* SERVICES */
+.services{
+    background-color: rgb(39, 232, 249);
+    grid-area: services;
+}
+/* PROJECTS */
+.projects{
+    background-color: rgb(101, 3, 98);
+    grid-area: projects;
+}
+/* FOOTER */
+.footer{
+    background-color: rgb(3, 74, 38);
+    grid-area: footer;
+}
