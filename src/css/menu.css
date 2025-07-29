@@ -22,7 +22,13 @@
     display: none;
     width: 60px;
     height: 60px;
+    align-self: flex-end;
 }
+.header nav label{
+    display: flex;
+    flex-direction: column; 
+}
+
 .header .hamburguer{ /* barra do meio do menu hamburguer*/
     background-color: #000;
     position: relative;
@@ -68,27 +74,32 @@
     transform: rotate(90deg);
 }
 
-
-
-
-
-
-
-
 @media (max-width: 900px){
     .header .menu{
         display: block;
     }
+
     .header nav ul{
-        position: absolute;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 75px);
-        background-color: #ffffff;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         display: none;
+    }
+
+    .header input:checked ~ ul{
+        display: block;
+    }
+    .header nav {
+        position: absolute;
+        top: 8px;
+        right:20px;
+       z-index: 1;
+    }
+     .header nav ul{
+        width: 200px;
+        background-color: #fff;
+        padding: 20px;
+     }
+     
+    .header nav ul li{
+        margin: 20px 0;
+        text-align: center;
     }
 }
